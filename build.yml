@@ -1,0 +1,36 @@
+sdk: "C:/RhoMobileSuite5.3.0.beta.13/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.3.0.beta.13"
+sdkversion: "5.2.0"
+name: "SipTestApp"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+applog: "rholog.txt"
+app_type: "rhoelements"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator8.2"
+  provisionprofile: 
+  codesignidentity: "iPhone Developer"
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.siptestapp"
+  BundleURLScheme: "siptestapp"
+  production:
+    ipa_itunesartwork_image: "./production/iTunesArtwork.png"
+wp8:
+  productid: "11e8ca30-546f-0133-070d-6c3be52d3de1"
+android:
+#manifest_template: 'AndroidManifest.erb'
+  version: "4.1.0"
+# Note: in order to simplify debugging only app messages and system channels with priority informative and higher, and any errors are enabled by default
+  logcatFilter: "APP:I StrictMode:I DEBUG:I *:E"
+wm: 
+win32:
+#sdk: "MC3000c50b (ARMV4I)"
+#sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+  deployqt: 1
+  deploymsvc: 1
+extensions:
+  - rhoconnect-client
+rhobundle:
+  exclude_items:
+    - thumb.db
